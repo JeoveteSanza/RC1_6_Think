@@ -1,24 +1,38 @@
+
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
-    <section class="hero">
-        <form action="action_page.php" method="post">
 
-            <div class="container">
-                <label for="email"><b>Email</b></label>
-                <input type="Email" placeholder="Email" email="email" require>
+<section class="hero">
+    <form action="action_page.php" method="POST">
+        <div class="container">
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Password" name="psw" required>
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-                <button type="submit">Login</button>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="psw" name="psw" placeholder="Password" required>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    <section class="painel">
+            <button type="submit">Iniciar sessão</button>
+
+            <label>
+                <input type="checkbox" name="remember">
+                Lembrar-me
+            </label>
+
+        </div>
+
+        <div class="container login-links">
+
+            <span class="psw">
+                <a href="recuperar-password.php">
+                    Esqueceste-te da palavra-passe?
+                </a>
+            </span>
+            <span class="registo">
+                <a href="registo.php">Criar conta</a>
+            </span>
+
+        </div>
+    </form>
+</section>
+

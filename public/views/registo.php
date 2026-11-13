@@ -1,27 +1,32 @@
+
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
-    <section class="hero">
-        <form action="action_page.php" method="post">
+<section class="hero">
+    <form action="action_page.php" method="POST">
+        <div class="container">
+            
+            <h2>Criar conta</h2>
 
-            <div class="container">
-                <label for="name"><b>Nome</b></label>
-                <input type="text" placeholder="Nome" name="name" required>
+            <label for="name"><b>Nome</b></label>
+            <input type="text" id="name" placeholder="O teu nome" name="name" required >
 
-                <label for="email"><b>Email</b></label>
-                <input type="Email" placeholder="Email" email="email" require>
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" placeholder="O teu email" name="email" required >
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Password" name="psw" required>
+            <label for="psw"><b>Palavra-passe</b></label>
+            <input type="password" id="psw" placeholder="Cria uma palavra-passe" name="psw" required minlength="8">
 
-                <button type="submit">Login</button>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
+            <button type="submit">Criar conta</button>
+        </div>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    <section class="painel">
+        <div class="container">
+
+            <span class="psw">
+                Já tens conta?
+                <a href="login.php">Iniciar sessão</a>
+            </span>
+
+        </div>
+    </form>
+</section>
+
