@@ -1,32 +1,74 @@
 
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
-<section class="hero">
-    <form action="action_page.php" method="POST">
-        <div class="container">
-            
-            <h2>Criar conta</h2>
+<div class="background">
+        <div class="login-container">
 
-            <label for="name"><b>Nome</b></label>
-            <input type="text" id="name" placeholder="O teu nome" name="name" required >
+            <h1>Criar uma conta</h1>
 
-            <label for="email"><b>Email</b></label>
-            <input type="email" id="email" placeholder="O teu email" name="email" required >
+            <form onsubmit="return registar(event)">
 
-            <label for="psw"><b>Palavra-passe</b></label>
-            <input type="password" id="psw" placeholder="Cria uma palavra-passe" name="psw" required minlength="8">
+                <div class="input-group">
+                    <input type="text" id="nome" placeholder=" " required>
+                    <label>Nome completo</label>
+                </div>
 
-            <button type="submit">Criar conta</button>
-        </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label>Email</label>
+                </div>
 
-        <div class="container">
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" " minlength="8" required>
+                    <label>Password (mínimo 8 caracteres)</label>
+                </div>
 
-            <span class="psw">
+                <div class="input-group">
+                    <input type="password" id="confirmar" placeholder=" " required>
+                    <label>Confirmar password</label>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">
+                        Aceito os termos e condições
+                    </label>
+                </div>
+
+                <button type="submit" class="main-button">
+                    Criar Conta
+                </button>
+
+            </form>
+
+            <div class="separator">
+                <span>OU</span>
+            </div>
+
+            <p class="register-text">
                 Já tens conta?
                 <a href="login.php">Iniciar sessão</a>
-            </span>
+            </p>
 
         </div>
-    </form>
-</section>
+    </div>
+
+    <script>
+        function registar(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const password = document.getElementById("password").value;
+            const confirmar = document.getElementById("confirmar").value;
+
+            if (password !== confirmar) {
+                alert("As passwords não coincidem!");
+                return false;
+            }
+
+            alert("Registo efetuado visualmente com sucesso, " + nome + "!");
+
+        }
+    </script>
+
 

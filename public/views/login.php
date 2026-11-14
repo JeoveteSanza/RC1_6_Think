@@ -2,37 +2,65 @@
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
 
-<section class="hero">
-    <form action="action_page.php" method="POST">
-        <div class="container">
+<div class="background">
+        <div class="login-container">
 
-            <label for="email"><b>Email</b></label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <div class="logo">WELCOME</div>
+            <h1>Bem-vindo de volta!</h1>
+            <p class="subtitle">Inicia sessão na tua conta</p>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id="psw" name="psw" placeholder="Password" required>
+            <form onsubmit="return login(event)">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label>Email</label>
+                </div>
 
-            <button type="submit">Iniciar sessão</button>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label>Password</label>
+                </div>
 
-            <label>
-                <input type="checkbox" name="remember">
-                Lembrar-me
-            </label>
+                <div class="options">
+                    <label class="remember">
+                        <input type="checkbox">
+                        Lembrar-me
+                    </label>
 
-        </div>
+                    <a href="#" onclick="alert('Contacta o administrador para recuperar a password.')">
+                        Esqueceste-te da password?
+                    </a>
+                </div>
 
-        <div class="container login-links">
+                <button type="submit" class="main-button">
+                    Iniciar Sessão
+                </button>
 
-            <span class="psw">
-                <a href="recuperar-password.php">
-                    Esqueceste-te da palavra-passe?
-                </a>
-            </span>
-            <span class="registo">
+            </form>
+
+            <div class="separator">
+                <span>OU</span>
+            </div>
+
+            <p class="register-text">
+                Ainda não tens conta?
                 <a href="registo.php">Criar conta</a>
-            </span>
+            </p>
+            <button><a href="organizador.php">teste</a></button>
 
         </div>
-    </form>
-</section>
+    </div>
+    <div class="img">
+        <img src="" alt="">
+    </div>
 
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            alert("Formulário preenchido com sucesso!\nEmail: " + email);
+
+        }
+    </script>

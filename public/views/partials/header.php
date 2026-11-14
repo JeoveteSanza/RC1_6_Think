@@ -10,8 +10,8 @@
 <header class="topo">
     <a class="marca" href="index.php">TH!INK</a>
     <nav>
-        <a href="index.php">Início</a>
-        <a href="index.php?acao=piratas">Piratas</a>
+        <a href="#">Início</a>
+        <a href="#">Piratas</a>
     </nav>
 </header>
 <main class="container">
