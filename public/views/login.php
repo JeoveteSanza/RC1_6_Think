@@ -6,7 +6,7 @@
         <div class="login-container">
 
             <div class="logo">WELCOME</div>
-            <h1>Bem-vindo de volta!</h1>
+            <h1>LOGIN</h1>
             <p class="subtitle">Inicia sessão na tua conta</p>
 
             <form onsubmit="return login(event)">
@@ -32,7 +32,9 @@
                 </div>
 
                 <button type="submit" class="main-button">
-                    Iniciar Sessão
+                     <a type="submit" class="main-button" href="index.php?acao=organizador">
+                        Iniciar Sessão
+                    </a>
                 </button>
 
             </form>
@@ -43,7 +45,7 @@
 
             <p class="register-text">
                 Ainda não tens conta?
-                <a href="registo.php">Criar conta</a>
+                <a href="index.php?acao=registro.php">Criar conta</a>
             </p>
             <button><a href="organizador.php">teste</a></button>
 
@@ -60,7 +62,7 @@
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
-            alert("Formulário preenchido com sucesso!\nEmail: " + email);
+            //alert("Formulário preenchido com sucesso!\nEmail: " + email);
 
         }
     </script>

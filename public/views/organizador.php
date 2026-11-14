@@ -30,6 +30,7 @@
             <div class="criar">
                 <a href="#">Criar</a>
             </div>
+
             <div>
                 <input type="text" placeholder="Pesquisar">
             </div>
@@ -42,8 +43,14 @@
             <section id="biblioteca" hidden>
                 <h2>Biblioteca</h2>
                 <article class="item">
-                    <h3>Exemplo de item</h3>
-                    <p>Descrição do item da biblioteca.</p>
+                    <div class="eventos">
+            <?php foreach ($eventos as $evento): ?>
+                <div class="cartao">
+                    <h2><?= $evento['nome'] ?></h2>
+                    <p><?= $evento['estado'] ?></p>
+                </div>
+            <?php endforeach ?>
+        </div>
                 </article>
             </section>
 

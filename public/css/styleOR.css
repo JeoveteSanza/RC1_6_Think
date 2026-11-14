@@ -1,231 +1,249 @@
 /* Configuração geral */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    overflow-x: hidden;
-    width: 100%;
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #08080c;
-    color: white;
+  font-family: Arial, sans-serif;
+  background-color: #08080c;
+  color: white;
 }
 
 /* Imagem da main */
 .main img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Botão de criação */
 .main .criar {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    background: #e63946;
-    padding: 10px 20px;
-    border-radius: 7px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    margin: 25px 0;
-    
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: #e63946;
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 25px 0;
 }
 
 .main .criar:hover {
-    background: #ff4d5a;
+  background: #ff4d5a;
 }
 
 /* Estrutura principal */
 .pagina {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Menu lateral */
 .menu {
-    width: 245px;
-    height: 100%;
-    padding: 30px 20px;
-    background: #111116;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-right: 1px solid #29292e;
-    display: flex;
-    flex-direction: column;
+  width: 245px;
+  height: 100%;
+  padding: 30px 20px;
+  background: #111116;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 1px solid #29292e;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Título do menu */
 .menu h1 {
-    margin: 0 0 8px;
-    font-size: 28px;
-    color: #ff4545;
-    letter-spacing: 1px;
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #ff4545;
+  letter-spacing: 1px;
 }
 
 .menu p {
-    margin: 0 0 20px;
-    color: #aaa;
+  margin: 0 0 20px;
+  color: #aaa;
 }
 
 /* Lista de navegação */
 .menu ul {
-    margin: 25px 0;
-    padding: 0;
-    list-style: none;
+  margin: 25px 0;
+  padding: 0;
+  list-style: none;
 }
 
 .menu ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 10px;
-    border-bottom: 1px solid #29292e;
-    transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 10px;
+  border-bottom: 1px solid #29292e;
+  transition: 0.3s;
 }
 
 /* Links do menu */
 .menu ul li a {
-    color: #bdbdc5;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
+  color: #bdbdc5;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .menu ul li:hover {
-    background: #202027;
-    border-radius: 6px;
+  background: #202027;
+  border-radius: 6px;
 }
 
 .menu ul li a:hover {
-    color: white;
+  color: white;
 }
 
 /* Posição dos elementos */
 .posicao {
-    width: 20px;
-    color: #aaa;
-    font-weight: bold;
-    text-align: right;
+  width: 20px;
+  color: #aaa;
+  font-weight: bold;
+  text-align: right;
 }
 
 .nome {
-    flex: 1;
+  flex: 1;
 }
 
 .equipa {
-    color: #aaa;
-    font-size: .7rem;
+  color: #aaa;
+  font-size: 0.7rem;
 }
 
 /* Botões do menu */
 .menu button {
-    font-size: 14px;
-    width: 100%;
-    padding: 10px 12px;
-    margin: 3px 0;
-    border: 0;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 3px 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .menu button:disabled {
-    opacity: .5;
-    cursor: default;
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* Área principal */
 .main {
-    position: relative;
-    flex: 1;
-    min-width: 0;
-    background: #0d0d12;
-    padding: 30px;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  background: #0d0d12;
+  padding: 30px;
 }
 
 /* Botão de ajuda */
 .ajuda {
-    width: 100%;
-    padding: 12px;
-    margin-top: auto;
-    border-radius: 7px;
-    font-weight: bold;
-    background: #e63946;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin-top: auto;
+  border-radius: 7px;
+  font-weight: bold;
+  background: #e63946;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
 }
 
 .ajuda:hover {
-    background: #ff4d5a;
+  background: #ff4d5a;
 }
 
 .ajuda a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .main a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-    /* Caixa de pesquisa */
+/* Caixa de pesquisa */
 .main input {
-    width: 300x;
-    max-width: 100%;
-    padding: 12px 15px;
-    margin-top: 20px;
-    background: #191920;
-    color: white;
-    border: 1px solid #34343d;
-    border-radius: 7px;
-    outline: none;
-    transition: 0.3s;
-    display: flex;
-                
+  width: 300x;
+  max-width: 100%;
+  padding: 12px 15px;
+  margin-top: 20px;
+  background: #191920;
+  color: white;
+  border: 1px solid #34343d;
+  border-radius: 7px;
+  outline: none;
+  transition: 0.3s;
+  display: flex;
 }
 
 .main input:focus {
-    border-color: #e63946;
+  border-color: #e63946;
+}
+
+.eventos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cartao {
+  background: #1d1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 240px;
+  box-shadow: 0 20px 7px #353333;
+}
+
+.preco {
+  color: #116b42;
+  font-weigth: bold;
 }
 
 /* Adaptação para ecrãs pequenos */
 @media (max-width: 768px) {
-    .menu {
-        width: 190px;
-        padding: 20px 12px;
-    }
+  .menu {
+    width: 190px;
+    padding: 20px 12px;
+  }
 
-    .main {
-        padding: 15px;
-    }
+  .main {
+    padding: 15px;
+  }
 
-    .main input {
-        width: 100%;
-    }
+  .main input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    .menu {
-        width: 150px;
-        padding: 15px 8px;
-    }
-    .menu h1 {
-        font-size: 21px;
-    }
-    .menu ul li {
-        padding: 10px 5px;
-    }
+  .menu {
+    width: 150px;
+    padding: 15px 8px;
+  }
+  .menu h1 {
+    font-size: 21px;
+  }
+  .menu ul li {
+    padding: 10px 5px;
+  }
 }
