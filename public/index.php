@@ -4,7 +4,8 @@ require_once __DIR__ . '/../app/controllers/thinkController.php';
 $acao = $_GET['acao'] ?? 'inicio';
 $controller = new ThinkController();
 
-switch ($acao) {
+
+ switch ($acao) {
     case 'inicio':
         $controller->inicio();
         break;
@@ -22,6 +23,7 @@ switch ($acao) {
         break;
     default:
         http_response_code(404);
-        echo "Página não encontrada.";
+        require __DIR__ . '/views/404.php';
         break;
+        
 }

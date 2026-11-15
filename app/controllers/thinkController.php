@@ -30,6 +30,7 @@ class ThinkController
         }
         require_once __DIR__ . '/../../public/views/organizador.php';
     }
+<<<<<<< HEAD
 
     public function detalhes()
     {
@@ -49,3 +50,6 @@ class ThinkController
         require_once __DIR__ . '/../../public/views/detalhes.php';
     }
 }
+=======
+}
+>>>>>>> c94bf72cc3aaa138266941bc58cfe0bde7d32925
