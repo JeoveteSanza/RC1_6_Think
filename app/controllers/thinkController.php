@@ -25,7 +25,6 @@ class ThinkController {
         $resultado[] = $evento;
     }
     }
-    var_dump($resultado);
     require __DIR__ . '/../../public/views/organizador.php';
      }
 }
