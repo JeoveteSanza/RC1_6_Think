@@ -19,6 +19,11 @@ class ThinkController
 
     public function criarjogos()
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (empty($_POST['nome']) || empty($_POST['descricao'])) {
+                echo "Preenche todos os campos obrigatórios.";
+            }
+        }
         require_once __DIR__ . '/../../public/views/criarjogos.php';
     }
 

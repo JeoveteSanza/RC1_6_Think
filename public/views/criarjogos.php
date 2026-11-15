@@ -1,41 +1,45 @@
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
+
+
 <div class="background">
     <div class="login-container">
 
         <h1>Criar Jogo</h1>
 
-        <form onsubmit="return criarJogo(event)">
+        <form method="POST" action="index.php?acao=criarjogos">
 
             <div class="input-group">
-                <label>Nome do jogo</label>
-                <input type="text" id="nome" placeholder="Nome do jogo" required>
+                <label for="nome">Nome do jogo</label>
+                <input type="text" id="nome" name="nome"
+                    placeholder="Nome do jogo">
             </div>
 
             <div class="input-group">
-                <label>Detalhes</label>
-                <input type="text" id="detalhes" placeholder="Descrição do jogo" required>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao"
+                    placeholder="Descrição do jogo" required>
             </div>
 
             <div class="input-group">
-                <label>Categoria</label>
-                <input type="text" id="categoria" placeholder="Programação, Matemática..." required>
-            </div>
-
-            <div class="input-group">
-                <label>Visibilidade</label>
-                <select id="visibilidade" required>
-                    <option value="publico">Público</option>
-                    <option value="privado">Privado</option>
+                <label for="tipo">Tipo de jogo</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="individual">Individual</option>
+                    <option value="equipa">Equipas</option>
+                    <option value="misto">Misto</option>
                 </select>
             </div>
 
-            <div class="terms">
-                <input type="checkbox" id="individual">
-                <label for="individual">Jogo individual</label>
+            <div class="input-group">
+                <label for="max_participantes">Máximo de participantes</label>
+                <input type="number" id="max_participantes"
+                    name="max_participantes" min="1" required>
+            </div>
 
-                <input type="checkbox" id="multijogador">
-                <label for="multijogador">Jogo em equipas</label>
+            <div class="input-group">
+                <label for="total_fases">Total de fases</label>
+                <input type="number" id="total_fases"
+                    name="total_fases" min="1" required>
             </div>
 
             <button type="submit" class="main-button">
@@ -50,10 +54,26 @@
 
         <p class="register-text">
             Queres voltar?
-            <a href="/RC1_6_Think/public/index.php?acao=organizador">Página Organizador</a>
+            <a href="/RC1_6_Think/public/index.php?acao=organizador">
+                Página Organizador
+            </a>
         </p>
 
     </div>
+</div>
+
+
+
+<div class="separator">
+    <span>OU</span>
+</div>
+
+<p class="register-text">
+    Queres voltar?
+    <a href="/RC1_6_Think/public/index.php?acao=organizador">Página Organizador</a>
+</p>
+
+</div>
 </div>
 
 <script>
