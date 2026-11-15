@@ -1,4 +1,3 @@
-
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
 <div class="background">
@@ -40,7 +39,7 @@
             </div>
 
             <button type="submit" class="main-button">
-                Iniciar Sessão
+                <a href="index.php?acao=organizador">Iniciar Sessão</a>
             </button>
 
         </form>
@@ -51,7 +50,7 @@
 
         <p class="register-text">
             Ainda não tens conta?
-            <a href="index.php?acao=registro.php">Criar conta</a>
+            <a href="index.php?acao=registrar">Criar conta</a>
         </p>
 
     </div>

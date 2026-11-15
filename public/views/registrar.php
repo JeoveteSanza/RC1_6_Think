@@ -50,7 +50,7 @@
 
             <p class="register-text">
                 Já tens conta?
-                <a href="login.php">Iniciar sessão</a>
+                <a href="index.php?acao=login">Iniciar sessão</a>
             </p>
 
         </div>
