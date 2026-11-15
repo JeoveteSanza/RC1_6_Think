@@ -10,8 +10,8 @@
 <header class="topo">
     <a class="marca" href="index.php">TH!INK</a>
     <nav>
-        <a href="index.php?acao=entrar">Entrar</a>
-        <a href="index.php?acao=resgistro">Resgistrar-se</a>
+        <a href="index.php?acao=login">Entrar</a>
+        <a href="index.php?acao=registrar">Registar-se</a>
     </nav>
 </header>
 <main class="container">
