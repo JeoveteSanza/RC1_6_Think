@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAP</title>
     <link rel="stylesheet" href="/RC1_6_Think/public/css/styleOR.css">
-    
+
 </head>
+
 <body>
     <div class="pagina">
         <aside class="menu">
             <h1>Th!nk</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#biblioteca">Biblioteca</a></li>
-                        <li><a href="#relatorio">Relatorio</a></li>
-                        <li><a href="#grupos">Grupos</a></li>
-                    </ul>
-                </nav>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><a href="#relatorio">Relatorio</a></li>
+                    <li><a href="#grupos">Grupos</a></li>
+                </ul>
+            </nav>
             <div class="ajuda">
                 <a href="#">Ajuda</a>
             </div>
         </aside>
 
-        
+
 
         <main class="main">
             <div class="criar">
@@ -43,14 +45,8 @@
             <section id="biblioteca" hidden>
                 <h2>Biblioteca</h2>
                 <article class="item">
-                    <div class="eventos">
-            <?php foreach ($eventos as $evento): ?>
-                <div class="cartao">
-                    <h2><?= $evento['nome'] ?></h2>
-                    <p><?= $evento['estado'] ?></p>
-                </div>
-            <?php endforeach ?>
-        </div>
+                    <h3>Item 1</h3>
+                    <p>Descrição do item 1.</p>
                 </article>
             </section>
 
@@ -66,7 +62,6 @@
         </main>
     </div>
     <script>
-
         const links = document.querySelectorAll('nav a');
         const secoes = document.querySelectorAll('main section');
 
@@ -91,8 +86,8 @@
 
         window.addEventListener('hashchange', trocarPagina);
         trocarPagina();
-
-  </script>
+    </script>
 
 </body>
+
 </html>
