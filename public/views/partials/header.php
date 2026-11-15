@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TH!K</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/RC1_6_Think/public/css/style_inicio.css">
   </head>
 <body>
 <header class="topo">

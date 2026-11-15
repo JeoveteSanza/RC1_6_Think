@@ -9,23 +9,26 @@
             <form onsubmit="return registar(event)">
 
                 <div class="input-group">
-                    <input type="text" id="nome" placeholder=" " required>
-                    <label>Nome completo</label>
+                    <label>Nome</label>
+                    <input type="text" id="nome" placeholder="nome" required>
+                    
                 </div>
 
                 <div class="input-group">
-                    <input type="email" id="email" placeholder=" " required>
                     <label>Email</label>
+                    <input type="email" id="email" placeholder=" email"required>
+                    
                 </div>
 
                 <div class="input-group">
-                    <input type="password" id="password" placeholder=" " minlength="8" required>
-                    <label>Password (mínimo 8 caracteres)</label>
+                    <label>Password </label>
+                    <input type="password" id="password" placeholder="password" minlength="8" required>
+                    
                 </div>
 
                 <div class="input-group">
-                    <input type="password" id="confirmar" placeholder=" " required>
                     <label>Confirmar password</label>
+                    <input type="password" id="confirmar" placeholder="Confirmar password" required>
                 </div>
 
                 <div class="terms">

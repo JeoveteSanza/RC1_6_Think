@@ -13,7 +13,7 @@ class ThinkController {
     }
 
     public function registrar(): void {
-        require_once __DIR__ . '/../../public/views/resgistro.php';
+        require_once __DIR__ . '/../../public/views/registro.php';
     }
 
     public function organizador(): void {

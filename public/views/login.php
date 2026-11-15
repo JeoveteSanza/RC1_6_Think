@@ -1,68 +1,71 @@
 
 <?php require __DIR__ . '/partials/header_login.php'; ?>
 
-
 <div class="background">
-        <div class="login-container">
 
-            <div class="logo">WELCOME</div>
+    <!-- LADO ESQUERDO: LOGIN -->
+    <div class="login-container">
+
+        <div class="logo">
             <h1>LOGIN</h1>
-            <p class="subtitle">Inicia sessão na tua conta</p>
+        </div>
 
-            <form onsubmit="return login(event)">
-                <div class="input-group">
-                    <input type="email" id="email" placeholder=" " required>
-                    <label>Email</label>
-                </div>
+        <p class="subtitle">Acede à tua conta</p>
 
-                <div class="input-group">
-                    <input type="password" id="password" placeholder=" " required>
-                    <label>Password</label>
-                </div>
+        <form onsubmit="return login(event)">
 
-                <div class="options">
-                    <label class="remember">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <div class="options">
+
+                <div class="lembrar">
+                    <label>
                         <input type="checkbox">
                         Lembrar-me
                     </label>
-
-                    <a href="#" onclick="alert('Contacta o administrador para recuperar a password.')">
-                        Esqueceste-te da password?
-                    </a>
                 </div>
 
-                <button type="submit" class="main-button">
-                     <a type="submit" class="main-button" href="index.php?acao=organizador">
-                        Iniciar Sessão
-                    </a>
-                </button>
+                <a href="#" onclick="alert('Contacta o administrador para recuperar a password.')">
+                    Recuperar password
+                </a>
 
-            </form>
-
-            <div class="separator">
-                <span>OU</span>
             </div>
 
-            <p class="register-text">
-                Ainda não tens conta?
-                <a href="index.php?acao=registro.php">Criar conta</a>
-            </p>
-            <button><a href="organizador.php">teste</a></button>
+            <button type="submit" class="main-button">
+                Iniciar Sessão
+            </button>
 
+        </form>
+
+        <div class="separator">
+            <span>OU</span>
         </div>
+
+        <p class="register-text">
+            Ainda não tens conta?
+            <a href="index.php?acao=registro.php">Criar conta</a>
+        </p>
+
     </div>
-    <div class="img">
-        <img src="" alt="">
-    </div>
 
-    <script>
-        function login(event) {
-            event.preventDefault();
+</div>
 
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
 
-            //alert("Formulário preenchido com sucesso!\nEmail: " + email);
+<script>
+    function login(event) {
+        event.preventDefault();
 
-        }
-    </script>
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Aqui podes adicionar a lógica de autenticação.
+    }
+</script>
