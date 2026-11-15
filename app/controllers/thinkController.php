@@ -17,6 +17,11 @@ class ThinkController
         require_once __DIR__ . '/../../public/views/registrar.php';
     }
 
+    public function criarjogos()
+    {
+        require_once __DIR__ . '/../../public/views/criarjogos.php';
+    }
+
     public function organizador()
     {
         $jogosModel = new JogosModel();

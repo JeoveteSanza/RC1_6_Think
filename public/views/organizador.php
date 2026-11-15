@@ -28,7 +28,7 @@
 
         <main class="main">
             <div class="criar">
-                <a href="#">Criar</a>
+                <a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a>
             </div>
 
 
