@@ -26,16 +26,11 @@
             </div>
         </aside>
 
-
-
         <main class="main">
             <div class="criar">
                 <a href="#">Criar</a>
             </div>
 
-            <div>
-                <input type="text" placeholder="Pesquisar">
-            </div>
 
             <section id="inicio">
                 <h2>Início</h2>
@@ -43,11 +38,27 @@
             </section>
 
             <section id="biblioteca" hidden>
+                <form method="GET" action="index.php#biblioteca">
+                    <input type="hidden" name="acao" value="organizador">
+
+                    <input type="text" name="pesquisa" placeholder="Pesquisar...">
+
+                    <button type="submit">Pesquisar</button>
+                </form>
                 <h2>Biblioteca</h2>
-                <article class="item">
-                    <h3>Item 1</h3>
-                    <p>Descrição do item 1.</p>
-                </article>
+                <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
+
+                    <p>Não foram encontrados jogos.</p>
+
+                <?php else: ?>
+
+                    <?php foreach ($pesquisaResultado as $jogo): ?>
+                        <article class="item">
+                            <h3><a href="index.php?acao=detalhes&amp;id=<?= $jogo['id'] ?>"><?= htmlspecialchars($jogo['nome']) ?></a></h3>
+                        </article>
+                    <?php endforeach; ?>
+
+                <?php endif; ?>
             </section>
 
             <section id="relatorio" hidden>

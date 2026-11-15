@@ -3,13 +3,12 @@ require_once __DIR__ . '/../app/controllers/thinkController.php';
 
 $acao = $_GET['acao'] ?? 'inicio';
 $controller = new ThinkController();
-$controller->$acao();
 
 switch ($acao) {
     case 'inicio':
         $controller->inicio();
         break;
-    case 'login':
+    case 'entrar':
         $controller->entrar();
         break;
     case 'registrar':
@@ -17,6 +16,9 @@ switch ($acao) {
         break;
     case 'organizador':
         $controller->organizador();
+        break;
+    case 'detalhes':
+        $controller->detalhes();
         break;
     default:
         http_response_code(404);

@@ -1,4 +1,5 @@
 <?php
+require_once  __DIR__ . '/../model/JogosModel.php';
 class ThinkController
 {
     public function inicio()
@@ -18,13 +19,33 @@ class ThinkController
 
     public function organizador()
     {
+        $jogosModel = new JogosModel();
+        $jogos = $jogosModel->getJogoPorOrganizador(232);
+        $pesquisa = trim((string) ($_GET['pesquisa'] ?? ''));
+        $pesquisaResultado = [];
+        foreach ($jogos as $jogo) {
+            if ($pesquisa === '' || strpos($jogo['nome'], $pesquisa) !== false) {
+                $pesquisaResultado[] = $jogo;
+            }
+        }
         require_once __DIR__ . '/../../public/views/organizador.php';
     }
-<<<<<<< HEAD
-}
-=======
+
+    public function detalhes()
+    {
+        $jogosModel = new JogosModel();
+
+        // Receber e validar o ID
+        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+        if ($id === false || $id === null || $id <= 0) {
+            $jogo = null;
+        } else {
+            // Procurar o jogo
+            $jogo = $jogosModel->getJogo($id);
+        }
+
+        // Carregar a View
+        require_once __DIR__ . '/../../public/views/detalhes.php';
     }
-    require __DIR__ . '/../../public/views/organizador.php';
-     }
 }
->>>>>>> 8995c99b74feb32903c33d17c80b7ef66157e4bf
