@@ -53,7 +53,7 @@
                 <?php else: ?>
 
                     <?php foreach ($pesquisaResultado as $jogo): ?>
-                        <article class="item">
+                        <article class="cartao">
                             <h3><a href="index.php?acao=detalhes&amp;id=<?= $jogo['id'] ?>"><?= htmlspecialchars($jogo['nome']) ?></a></h3>
                         </article>
                     <?php endforeach; ?>
