@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/partials/header.php'; ?>
   <section class="hero">
     <span class="eyebrow">JOGOS DE PISTAS POR LOCALIZAÇÃO</span>
-    <h1>Explora. Descobre. Participa.</h1>
+    <h1>Explora, Descobre, Participa.</h1>
     <p>
       Descobre percursos, resolve perguntas e acumula pontos enquanto exploras diferentes locais.
     </p>
