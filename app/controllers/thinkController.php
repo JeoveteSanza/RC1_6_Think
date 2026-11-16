@@ -30,7 +30,7 @@ class ThinkController
     public function organizador()
     {
         $jogosModel = new JogosModel();
-        $jogos = $jogosModel->getJogoPorOrganizador(232);
+        $jogos = $jogosModel->getJogos();
         $pesquisa = trim((string) ($_GET['pesquisa'] ?? ''));
         $pesquisaResultado = [];
         foreach ($jogos as $jogo) {
