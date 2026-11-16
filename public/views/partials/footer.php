@@ -1,1 +1,1 @@
-</main><footer>Grand Line Explorer · Projeto pedagógico PHP MVC · Fase 1</footer></body></html>
+</main><footer>Plataforma de Jogos de Pistas por Localização · PAP · Fase 1</footer></body></html>
