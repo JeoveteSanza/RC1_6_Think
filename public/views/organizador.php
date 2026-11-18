@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAP</title>
-    <link rel="stylesheet" href="/RC1_6_Think/public/css/styleOR.css">
+    <title>TH!NK</title>
 
+    <link rel="stylesheet" href="/RC1_6_Think/public/css/styleOR.css?v=2">
 </head>
 
 <body>
@@ -15,10 +15,21 @@
             <h1>Th!nk</h1>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><details class="collapse">
+                            <summary>Gestão de jogos</summary>
+
+                            <div class="conteudo">
+                                <li><a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a></li>
+                                <li><a href="#">Editar Jogos</a></li>
+                            </div>
+                        </details>
+
+                    </li>
                     <li><a href="#biblioteca">Biblioteca</a></li>
-                    <li><a href="#relatorio">Relatorio</a></li>
-                    <li><a href="#grupos">Grupos</a></li>
+                    <li><a href="#historico">Histórico</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#definicoes">Definições</a></li>
                 </ul>
             </nav>
             <div class="ajuda">
@@ -27,16 +38,15 @@
         </aside>
 
         <main class="main">
-            <div class="criar">
-                <a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a>
-            </div>
-
-
+            
+        
             <section id="inicio">
                 <h2>Início</h2>
                 <p>Bem-vindo ao Think.</p>
             </section>
 
+            
+            
             <section id="biblioteca" hidden>
                 <form method="GET" action="index.php#biblioteca">
                     <input type="hidden" name="acao" value="organizador">
@@ -46,17 +56,30 @@
                     <button type="submit">Pesquisar</button>
                 </form>
                 <h2>Biblioteca</h2>
-                <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
+                    <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
 
-                    <p>Não foram encontrados jogos.</p>
+                        <p>Não foram encontrados jogos.</p>
 
-                <?php else: ?>
+                    <?php else: ?>
+                    
+                    
+                    <div class="biblioteca-cartoes">
 
-                    <?php foreach ($pesquisaResultado as $jogo): ?>
-                        <article class="cartao">
-                            <h3><a href="index.php?acao=detalhes&amp;id=<?= $jogo['id'] ?>"><?= htmlspecialchars($jogo['nome']) ?></a></h3>
-                        </article>
-                    <?php endforeach; ?>
+                        <?php foreach ($pesquisaResultado as $jogo): ?>
+
+                                <div class="cartao">
+                                    <h3>
+                                        <?= htmlspecialchars($jogo['nome']) ?>
+                                    </h3>
+
+                                    <a href="index.php?acao=detalhes&id=<?= $jogo['id'] ?>" title="Ver detalhes">
+                                        <i class="bi bi-pencil-square">AAAAAAAAAAAA</i>
+                                    </a>
+                                </div>
+
+                        <?php endforeach; ?>
+
+                    </div>
 
                 <?php endif; ?>
             </section>

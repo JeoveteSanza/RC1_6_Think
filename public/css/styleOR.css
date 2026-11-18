@@ -147,11 +147,13 @@ body {
 
 /* Área principal */
 .main {
-  position: relative;
-  flex: 1;
-  min-width: 0;
-  background: #0d0d12;
-  padding: 30px;
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    background: #0d0d12;
+    color: white;
+    padding: 30px;
 }
 
 /* Botão de ajuda */
@@ -206,14 +208,6 @@ body {
   flex-wrap: wrap;
 }
 
-.cartao {
-  background: #1d1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  width: 240px;
-  box-shadow: 0 20px 7px #353333;
-}
-
 .preco {
   color: #116b42;
   font-weigth: bold;
@@ -246,4 +240,59 @@ body {
   .menu ul li {
     padding: 10px 5px;
   }
+}
+
+.biblioteca-cartoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cartao {
+    width: 100%;
+    background: #4c1d95;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartao:hover {
+    transform: translateY(-2px);
+}
+
+.cartao table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cartao th {
+    width: 45px;
+    color: #8b5cf6;
+    font-size: 14px;
+    text-align: left;
+}
+
+.cartao td {
+    padding: 10px;
+    color: #374151;
+    font-size: 15px;
+}
+
+.cartao td:nth-child(2) {
+    font-weight: 600;
+}
+
+.cartao a {
+    color: black;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.cartao a:hover {
+    color: #ff0000;
 }
