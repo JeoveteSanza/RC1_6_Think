@@ -11,7 +11,7 @@
 
 <body>
     <div class="pagina">
-        <aside class="menu">
+        <article  class="menu">
             <h1>Th!nk</h1>
             <nav>
                 <ul>
@@ -35,14 +35,79 @@
             <div class="ajuda">
                 <a href="#">Ajuda</a>
             </div>
-        </aside>
+
+        </article>
 
         <main class="main">
             
         
             <section id="inicio">
-                <h2>Início</h2>
-                <p>Bem-vindo ao Think.</p>
+                <h1>Painel geral</h1>
+
+                <div class="card-content">
+
+                    <article class="card">
+
+                        <div class="card-body">
+                            <header class="card-header">
+                                <h2>Numero de eventos</h2>
+                            </header>
+                            <p>Falta o php</p>
+                        </div>
+                        
+                    </article>
+
+                    <article class="card">
+                        
+                        <div class="card-body">
+                            <header class="card-header">
+                                <h2>Título do Card</h2>
+                            </header>
+                            <p>Texto descritivo curto e direto.</p>
+                        </div>
+                        
+                    </article>
+
+                    <article class="card">
+                        
+                        <div class="card-body">
+                            <header class="card-header">
+                                <h2>Título do Card</h2>
+                            </header>
+                            <p>Texto descritivo curto e direto.</p>
+                        </div>
+                        
+                    </article>
+
+                    <article class="card1">
+                        
+                        <div class="card-body">
+                            <header class="card-header">
+                                <h2>Estado dos eventos</h2>
+                            </header>
+                            <div class="inicio-cartao">
+
+                            <?php foreach ($pesquisaResultado as $jogo): ?>
+
+                                    <div class="cartao-inicio">
+                                        <h3>
+                                            <?= htmlspecialchars($jogo['nome']) ?>
+                                        </h3>
+
+                                        <a href="index.php?acao=detalhes&id=<?= $jogo['id'] ?>" title="Ver detalhes">
+                                            <i class="bi bi-pencil-square">Ver Detalhes</i>
+                                        </a>
+                                    </div>
+
+                            <?php endforeach; ?>
+
+                    </div>
+                        </div>
+                        
+                    </article>
+
+                </div>
+                
             </section>
 
             
@@ -53,7 +118,7 @@
 
                     <input type="text" name="pesquisa" placeholder="Pesquisar...">
 
-                    <button type="submit">Pesquisar</button>
+                    <button class="btn" type="submit">Pesquisar</button>
                 </form>
                 <h2>Biblioteca</h2>
                     <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
@@ -73,7 +138,7 @@
                                     </h3>
 
                                     <a href="index.php?acao=detalhes&id=<?= $jogo['id'] ?>" title="Ver detalhes">
-                                        <i class="bi bi-pencil-square">AAAAAAAAAAAA</i>
+                                        <i class="bi bi-pencil-square">Ver Detalhes</i>
                                     </a>
                                 </div>
 

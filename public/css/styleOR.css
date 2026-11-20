@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   overflow-x: hidden;
@@ -11,36 +10,9 @@ body {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #08080c;
+  font-family: 'Courier New', monospace;
+  background-color:#F3F7FC;
   color: white;
-}
-
-/* Imagem da main */
-.main img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Botão de criação */
-.main .criar {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  background: #e63946;
-  padding: 10px 20px;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 25px 0;
-}
-
-.main .criar:hover {
-  background: #ff4d5a;
 }
 
 /* Estrutura principal */
@@ -56,7 +28,7 @@ body {
   width: 245px;
   height: 100%;
   padding: 30px 20px;
-  background: #111116;
+  background:#123B66;
   overflow-y: auto;
   overflow-x: hidden;
   border-right: 1px solid #29292e;
@@ -68,13 +40,13 @@ body {
 .menu h1 {
   margin: 0 0 8px;
   font-size: 28px;
-  color: #ff4545;
+  color: white;
   letter-spacing: 1px;
 }
 
 .menu p {
   margin: 0 0 20px;
-  color: #aaa;
+  color:#172B4D;
 }
 
 /* Lista de navegação */
@@ -95,25 +67,25 @@ body {
 
 /* Links do menu */
 .menu ul li a {
-  color: #bdbdc5;
+  color:white;
   text-decoration: none;
   font-size: 14px;
   transition: 0.3s;
 }
 
 .menu ul li:hover {
-  background: #202027;
+  background: #374151;
   border-radius: 6px;
 }
 
 .menu ul li a:hover {
-  color: white;
+  color:#8b5cf6;
 }
 
 /* Posição dos elementos */
 .posicao {
   width: 20px;
-  color: #aaa;
+  color:#172B4D;
   font-weight: bold;
   text-align: right;
 }
@@ -123,7 +95,7 @@ body {
 }
 
 .equipa {
-  color: #aaa;
+  color: #172B4D;
   font-size: 0.7rem;
 }
 
@@ -138,6 +110,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: 0.3s;
+  background: #F28C28;
 }
 
 .menu button:disabled {
@@ -151,8 +124,8 @@ body {
     flex: 1;
     min-width: 0;
     min-height: 100vh;
-    background: #0d0d12;
-    color: white;
+    background: #F3F7FC;
+    color:#172B4D;
     padding: 30px;
 }
 
@@ -171,35 +144,74 @@ body {
 }
 
 .ajuda:hover {
-  background: #ff4d5a;
+  background: #D97706;
 }
 
 .ajuda a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 .main a {
-  color: white;
+  color: #1769AA;
   text-decoration: none;
 }
 
 /* Caixa de pesquisa */
-.main input {
-  width: 300x;
-  max-width: 100%;
-  padding: 12px 15px;
-  margin-top: 20px;
-  background: #191920;
-  color: white;
-  border: 1px solid #34343d;
-  border-radius: 7px;
-  outline: none;
-  transition: 0.3s;
-  display: flex;
+.main form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
+.main input {
+    width: 300px;
+    max-width: 100%;
+    padding: 12px 15px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    color: #172B4D;
+    border: 1px solid #DCE6F1;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Placeholder */
+.main input::placeholder {
+    color: #64748B;
+}
+
+/* Quando clicas na pesquisa */
 .main input:focus {
-  border-color: #e63946;
+    border-color: #1769AA;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+/* Botão pesquisar */
+.btn {
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: #F28C28;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Quando passas o rato no botão */
+.btn:hover {
+    background: #D97706;
+}
+
+/* Quando clicas no botão */
+.btn:active {
+    transform: scale(0.97);
 }
 
 .eventos {
@@ -210,7 +222,7 @@ body {
 
 .preco {
   color: #116b42;
-  font-weigth: bold;
+  font-weight: bold;
 }
 
 /* Adaptação para ecrãs pequenos */
@@ -250,7 +262,7 @@ body {
 
 .cartao {
     width: 100%;
-    background: #4c1d95;
+    background: #FFFFFF;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 16px 20px;
@@ -295,4 +307,59 @@ body {
 
 .cartao a:hover {
     color: #ff0000;
+}
+
+/*card inicio*/
+.card-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: grid;
+  flex-direction: column;
+  max-width: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  align-items: center;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card1{
+  display: grid;
+  flex-direction: column;
+  width: 1140px;
+  height: 460px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  
+}
+
+.inicio-cartao{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.cartao-inicio{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 20px;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

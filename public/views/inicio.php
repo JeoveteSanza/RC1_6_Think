@@ -15,4 +15,3 @@
        Começa por consultar os jogos disponíveis e prepara-te para explorar, descobrir pistas e completar desafios.
     </p>
   </section>
-<?php require __DIR__ . '/partials/footer.php'; ?>

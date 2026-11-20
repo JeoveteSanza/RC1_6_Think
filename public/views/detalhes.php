@@ -1,8 +1,26 @@
-<?php require __DIR__ . '/partials/header.php'; ?>
 
-<a class="voltar" href="index.php?acao=organizador#biblioteca">
-    ← Voltar aos meus jogos
-</a>
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TH!NK</title>
+  <link rel="stylesheet" href="/RC1_6_Think/public/css/style_inicio.css">
+</head>
+
+<body>
+  <header class="topo">
+    <a class="marca" href="/RC1_6_Think/public/index.php">TH!NK</a>
+    <nav>
+        <a class="voltar" href="index.php?acao=organizador#biblioteca">
+            ← Voltar aos meus jogos
+        </a>
+    </nav>
+</header>
+  <main class="container">
+
+
 
 <section class="ficha">
     <?php if ($jogo !== null): ?>
@@ -20,22 +38,34 @@
                 <?= htmlspecialchars($jogo['descricao'], ENT_QUOTES, 'UTF-8') ?>
             </p>
 
-            <dl>
-                <dt>Estado</dt>
-                <dd><?= htmlspecialchars($jogo['estado'], ENT_QUOTES, 'UTF-8') ?></dd>
+            <div class="ficha-filho">
+                    <div class="ficha-status">
+                        <h3>Estado</h3>
+                        <p><?= htmlspecialchars($jogo['estado'], ENT_QUOTES, 'UTF-8') ?></p>
+                    </div>
 
-                <dt>Tipo de jogo</dt>
-                <dd><?= htmlspecialchars($jogo['tipo'], ENT_QUOTES, 'UTF-8') ?></dd>
+                    <div class="ficha-status">
+                        <h3>Tipo de jogo</h3>
+                        <p><?= htmlspecialchars($jogo['tipo'], ENT_QUOTES, 'UTF-8') ?></p>
+                    </div>
+                    
+                    <div class="ficha-status">
+                        <h3>Máximo de participantes</h3>
+                        <p><?= htmlspecialchars((string)$jogo['max_participantes'], ENT_QUOTES, 'UTF-8') ?></p>
+                    </div>
+                    
+                    <div class="ficha-status">
+                        <h3>Total de fases</h3>
+                        <p><?= htmlspecialchars((string)$jogo['total_fases'], ENT_QUOTES, 'UTF-8') ?></p>
+                    </div>
 
-                <dt>Máximo de participantes</dt>
-                <dd><?= htmlspecialchars((string)$jogo['max_participantes'], ENT_QUOTES, 'UTF-8') ?></dd>
+                    <div class="ficha-status">
+                        <h3>Organizador</h3>
+                        <p><?= htmlspecialchars((string)$jogo['organizador_id'], ENT_QUOTES, 'UTF-8') ?></p>
+                    </div>
 
-                <dt>Total de fases</dt>
-                <dd><?= htmlspecialchars((string)$jogo['total_fases'], ENT_QUOTES, 'UTF-8') ?></dd>
-
-                <dt>Organizador</dt>
-                <dd><?= htmlspecialchars((string)$jogo['organizador_id'], ENT_QUOTES, 'UTF-8') ?></dd>
-            </dl>
+            </div>
+            
         </div>
 
     <?php else: ?>

@@ -10,10 +10,11 @@
 
 <body>
   <header class="topo">
-    <a class="marca" href="index.php">TH!NK</a>
+    <a class="marca" href="/RC1_6_Think/public/index.php">TH!NK</a>
     <nav>
-      <a href="index.php?acao=entrar">Entrar</a>
-      <a href="index.php?acao=registrar">Registrar-se</a>
+        <a href="/RC1_6_Think/public/index.php?acao=entrar">Entrar</a>
+
+        <a href="/RC1_6_Think/public/index.php?acao=registrar">Registar-se</a>
     </nav>
-  </header>
+</header>
   <main class="container">
