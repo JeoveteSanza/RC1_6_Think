@@ -19,14 +19,14 @@ body {
 .pagina {
   display: flex;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow: visible;
 }
 
 /* Menu lateral */
 .menu {
   width: 245px;
-  height: 100%;
+  height: 100vh;
   padding: 30px 20px;
   background: #123b66;
   overflow-y: auto;
@@ -34,6 +34,10 @@ body {
   border-right: 1px solid #29292e;
   display: flex;
   flex-direction: column;
+
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
 }
 
 /* Título do menu */
@@ -191,6 +195,18 @@ body {
   box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
 }
 
+.filtro{
+  padding: 10px 10px;
+  margin-top: 25px;
+  background: #f28c28;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 /* Botão pesquisar */
 .btn {
   padding: 12px 20px;
@@ -203,6 +219,7 @@ body {
   font-weight: bold;
   transition: 0.3s;
 }
+
 
 /* Quando passas o rato no botão */
 .btn:hover {
@@ -421,18 +438,21 @@ body {
 /*card inicio*/
 .card-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  width: 100%;
+  align-items: stretch;
 }
 .card {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  max-width: 340px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: none;
+  min-height: 200px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: #fff;
-  align-items: center;
 }
 
 .card-body {
@@ -443,12 +463,14 @@ body {
 }
 
 .card1 {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  width: 1140px;
-  height: 460px;
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  min-height: 460px;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: #fff;
 }
@@ -469,4 +491,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .card-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .card-content {
+    grid-template-columns: 1fr;
+  }
 }

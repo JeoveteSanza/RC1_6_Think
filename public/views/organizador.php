@@ -22,24 +22,22 @@
                             <summary>Gestão de jogos</summary>
 
                             <div class="conteudo">
-                    <li><a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a></li>
-                    <li><a href="#">Editar Jogos</a></li>
-    </div>
-    </details>
+                            <li><a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a></li>
+                            <li><a href="#">Editar Jogos</a></li>
+                    </div>
+                    </details>
+                    </li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><a href="#historico">Histórico</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#definicoes">Definições</a></li>
+                </ul>
+                </nav>
+                <div class="ajuda">
+                    <a href="#">Ajuda</a>
+                </div>
 
-    </li>
-    <li><a href="#biblioteca">Biblioteca</a></li>
-    <li><a href="#historico">Histórico</a></li>
-    <li><a href="#resultados">Resultados</a></li>
-    <li><a href="#definicoes">Definições</a></li>
-    </ul>
-    </nav>
-    <div class="ajuda">
-        <a href="#">Ajuda</a>
-    </div>
-
-    </article>
-
+        </article>
     <main class="main">
 
 
@@ -63,9 +61,9 @@
 
                     <div class="card-body">
                         <header class="card-header">
-                            <h2>Título do Card</h2>
+                            <h2>Participantes</h2>
                         </header>
-                        <p>Texto descritivo curto e direto.</p>
+                        <p>10<p>
                     </div>
 
                 </article>
@@ -74,9 +72,9 @@
 
                     <div class="card-body">
                         <header class="card-header">
-                            <h2>Título do Card</h2>
+                            <h2>Jogos realizados.</h2>
                         </header>
-                        <p>Texto descritivo curto e direto.</p>
+                        <p>20</p>
                     </div>
 
                 </article>
@@ -113,15 +111,14 @@
         </section>
 
 
-
         <section id="biblioteca" hidden>
             <div>
                 <form method="GET" action="index.php#biblioteca">
                     <input type="hidden" name="acao" value="organizador">
                     <input type="text" name="pesquisa" placeholder="Pesquisar...">
+                    <button class="filtro"><i class="fa-solid fa-sliders"></i></button>
                     <button class="btn" type="submit">Pesquisar</button>
                 </form>
-                <button><i class="fa-solid fa-sliders"></i></button>
             </div>
             <h2>Biblioteca</h2>
             <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
