@@ -1,6 +1,6 @@
 <?php
 require_once  __DIR__ . '/../model/JogosModel.php';
-class ThinkController
+class Controller
 {
     public function inicio()
     {

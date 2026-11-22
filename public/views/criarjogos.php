@@ -64,17 +64,8 @@
 
 
 
-<div class="separator">
-    <span>OU</span>
-</div>
 
-<p class="register-text">
-    Queres voltar?
-    <a href="/RC1_6_Think/public/index.php?acao=organizador">Página Organizador</a>
-</p>
 
-</div>
-</div>
 
 <script>
     function criarJogo(event) {

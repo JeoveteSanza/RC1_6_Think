@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../app/controllers/Controller.php';
 
 $acao = $_GET['acao'] ?? 'inicio';
-$controller = new ThinkController();
+$controller = new Controller();
 
 
 switch ($acao) {
