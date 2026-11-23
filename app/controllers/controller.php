@@ -32,7 +32,6 @@ class Controller
         $jogosModel = new JogosModel();
         $jogosModel->iniciarData();
         $jogos = $jogosModel->getJogos();
-        $jogosModel->iniciarData();
         $pesquisa = trim((string) ($_GET['pesquisa'] ?? ''));
         $pesquisaResultado = [];
         foreach ($jogos as $jogo) {
