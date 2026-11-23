@@ -22,6 +22,15 @@
             </div>
 
             <div class="input-group">
+                <label for="tipo">Categoria</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="individual">Individual</option>
+                    <option value="equipa">Equipas</option>
+                    <option value="misto">Misto</option>
+                </select>
+            </div>
+
+            <div class="input-group">
                 <label for="tipo">Tipo de jogo</label>
                 <select id="tipo" name="tipo" required>
                     <option value="individual">Individual</option>
