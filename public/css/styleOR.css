@@ -195,7 +195,7 @@ body {
   box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
 }
 
-.filtro{
+.filtro {
   padding: 10px 10px;
   margin-top: 25px;
   background: #f28c28;
@@ -219,7 +219,6 @@ body {
   font-weight: bold;
   transition: 0.3s;
 }
-
 
 /* Quando passas o rato no botão */
 .btn:hover {
@@ -491,6 +490,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.filter-buttons {
+  margin-top: 20px;
 }
 
 @media (max-width: 900px) {
