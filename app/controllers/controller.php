@@ -30,7 +30,9 @@ class Controller
     public function organizador()
     {
         $jogosModel = new JogosModel();
+        $jogosModel->iniciarData();
         $jogos = $jogosModel->getJogos();
+        $jogosModel->iniciarData();
         $pesquisa = trim((string) ($_GET['pesquisa'] ?? ''));
         $pesquisaResultado = [];
         foreach ($jogos as $jogo) {
@@ -44,7 +46,7 @@ class Controller
     public function detalhes()
     {
         $jogosModel = new JogosModel();
-
+        $jogosModel->iniciarData();
         // Receber e validar o ID
         $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
