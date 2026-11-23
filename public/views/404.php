@@ -10,4 +10,4 @@
     <a class="botao" href="index.php">Regressar ao início</a>
 </section>
 
-<?php require __DIR__ . '/partials/footer.php'; ?>
+
