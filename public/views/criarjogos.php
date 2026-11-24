@@ -7,7 +7,7 @@
 
         <h1>Criar Jogo</h1>
 
-        <form method="POST" action="index.php?acao=criarjogos">
+        <form method="POST" action="index.php?acao=organizador">
 
             <div class="input-group">
                 <label for="nome">Nome do jogo</label>
@@ -23,19 +23,25 @@
 
             <div class="input-group">
                 <label for="tipo">Categoria</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="individual">Individual</option>
-                        <option value="equipa">Equipas</option>
-                        <option value="misto">Misto</option>
-                    </select>
+                <select id="tipo" name="tipo" required>
+                    <option value="individual">Individual</option>
+                    <option value="equipa">Equipas</option>
+                    <option value="misto">Misto</option>
+                </select>
             </div>
 
             <div class="input-group">
                 <label for="tipo">Tipo de jogo</label>
                 <select id="tipo" name="tipo" required>
-                    <option value="individual">Individual</option>
-                    <option value="equipa">Equipas</option>
-                    <option value="misto">Misto</option>
+                    <option name="Cultura">Cultura</option>
+                    <option name="Tecnologia">Tecnologia</option>
+                    <option name="Gastronomia">Gastronomia</option>
+                    <option name="Educação">Educação</option>
+                    <option name="Desporto">Desporto</option>
+                    <option name="Arte">Arte</option>
+                    <option name="Ciência">Ciência</option>
+                    <option name="Natureza">Natureza</option>
+                    <option name="Sociedade">Sociedade</option>
                 </select>
             </div>
 
