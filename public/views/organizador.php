@@ -22,11 +22,11 @@
                             <summary>Gestão de jogos</summary>
 
                             <div class="conteudo">
-                    <li><a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a></li>
-                    <li><a href="#">Editar Jogos</a></li>
-    </div>
-    </details>
-    </li>
+                        <li><a href="/RC1_6_Think/public/index.php?acao=criarjogos">Criar</a></li>
+                        <li><a href="#">Editar Jogos</a></li>
+                        </div>
+                        </details>
+                    </li>
     <li><a href="#biblioteca">Biblioteca</a></li>
     <li><a href="#historico">Histórico</a></li>
     <li><a href="#resultados">Resultados</a></li>
@@ -63,8 +63,7 @@
                         <header class="card-header">
                             <h2>Participantes</h2>
                         </header>
-                        <p>10
-                        <p>
+                        <p>10</p>
                     </div>
 
                 </article>
@@ -117,21 +116,28 @@
                 <form method="GET" action="index.php#biblioteca">
                     <input type="hidden" name="acao" value="organizador">
                     <input type="text" name="pesquisa" placeholder="Pesquisar...">
-                    <button class="filtro"><i class="fa-solid fa-sliders"></i></button>
+
+                    <details class="filtro">
+                        <summary>Gestão de jogos</summary>
+
+                        <div class="conteudo">
+                            <div class="filter-buttons">
+                                <button data-category="all" class="active">All</button>
+                                <button data-category="Cultura">Cultura</button>
+                                <button data-category="Tecnologia">Tecnologia</button>
+                                <button data-category="Gastronomia">Gastronomia</button>
+                                <button data-category="Educação">Educação</button>
+                                <button data-category="Desporto">Desporto</button>
+                                <button data-category="Arte">Arte</button>
+                                <button data-category="Ciência">Ciência</button>
+                                <button data-category="Natureza">Natureza</button>
+                                <button data-category="Sociedade">Sociedade</button>
+                            </div>
+                        </div>
+                    </details>
+ 
                     <button class="btn" type="submit">Pesquisar</button>
                 </form>
-            </div>
-            <div class="filter-buttons">
-                <button data-category="all" class="active">All</button>
-                <button data-category="Cultura">Cultura</button>
-                <button data-category="Tecnologia">Tecnologia</button>
-                <button data-category="Gastronomia">Gastronomia</button>
-                <button data-category="Educação">Educação</button>
-                <button data-category="Desporto">Desporto</button>
-                <button data-category="Arte">Arte</button>
-                <button data-category="Ciência">Ciência</button>
-                <button data-category="Natureza">Natureza</button>
-                <button data-category="Sociedade">Sociedade</button>
             </div>
             <h2>Biblioteca</h2>
             <?php if (empty($pesquisaResultado) && $pesquisa !== ''): ?>
